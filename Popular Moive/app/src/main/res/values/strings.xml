@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PopularMovie</string>
+    <string name="blade_title">Blade Runner 2049</string>
+    <string name="blade_type">(Action , Thriller , Science, Fiction , Mystery)</string>
+    <string name="blade_popular"> Current Popularity</string>
+    <string name="btn_overview">Movie Overview</string>
+</resources>
