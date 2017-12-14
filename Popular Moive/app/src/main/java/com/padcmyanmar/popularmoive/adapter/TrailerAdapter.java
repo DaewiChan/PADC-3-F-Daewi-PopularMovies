@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.padcmyanmar.popularmoive.R;
+import com.padcmyanmar.popularmoive.viewholder.ItemMoviesViewHolder;
 import com.padcmyanmar.popularmoive.viewholder.ItemTrailerViewHolder;
 
 /**
@@ -34,7 +35,6 @@ public class TrailerAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
     }
 
     @Override
