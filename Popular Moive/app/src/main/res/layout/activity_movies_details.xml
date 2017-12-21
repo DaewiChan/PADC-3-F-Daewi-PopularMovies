@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            >
+
+            <RelativeLayout
+                android:id="@+id/ll_app_blade_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_blade_details"
+                    android:layout_width="140dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_blade_movie"
+                    android:fitsSystemWindows="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_blade_new_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/iv_blade_details"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/tv_blade_details"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_blade_new_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_blade_new_title"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/iv_blade_details"
+                    android:text="@string/tv_blade_new_details"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4sp"/>
+
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_favorite"
+                    android:gravity="center"
+                    android:text="@string/movie_rating"
+                    android:textColor="@android:color/white" />
+
+                <RatingBar
+                    android:id="@+id/rb_details_star"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_blade_details"
+                    android:layout_marginLeft="8dp"
+                    android:numStars="7"
+                    android:rating="7"
+                    android:scaleX="1"
+                    android:scaleY="1" />
+
+                <TextView
+                    android:id="@+id/tv_release"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rb_details_star"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/movie_released"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <RelativeLayout
+            android:id="@+id/ll_main_blade_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_redemption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorRed"
+                android:padding="16dp"
+                android:text="@string/movie_redemption"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_redemption"
+                android:gravity="center"
+                android:layout_alignLeft="@id/tv_redemption">
+
+                <Button
+                    android:id="@+id/btn_drama"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:text="Drama"
+                    android:layout_margin="12dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorPrimary" />
+
+                <Button
+                    android:id="@+id/btn_crime"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="8dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Crime"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:onClick="ShowCrime"
+                />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_category"
+                android:layout_marginLeft="16dp"
+                android:text="@string/movie_hours"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_trailer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_hour"
+                android:layout_margin="12dp" />
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rec_trailer"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/tv_review"
+                android:textColor="@color/primary_text"
+                android:textSize="24sp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_review_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_review"
+                android:layout_marginLeft="16dp"
+                android:text="@string/tv_review_details"
+                android:textSize="20sp"
+                android:lineSpacingExtra="5sp"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_favorite_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_favorite_border_white"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="right|bottom" />
+
+</android.support.design.widget.CoordinatorLayout>
