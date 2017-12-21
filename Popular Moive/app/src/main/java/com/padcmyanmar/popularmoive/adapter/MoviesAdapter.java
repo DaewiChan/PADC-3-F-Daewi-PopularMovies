@@ -9,14 +9,20 @@ import android.view.ViewGroup;
 import com.padcmyanmar.popularmoive.R;
 import com.padcmyanmar.popularmoive.viewholder.ItemMoviesViewHolder;
 
+import delegates.MoviesActionDelegate;
+
 /**
  * Created by Daewi on 12/3/2017.
  */
 
 public class MoviesAdapter extends RecyclerView.Adapter {
+    private MoviesActionDelegate mMoviesActionDelegate;
 
-    public MoviesAdapter() {
+    public MoviesAdapter(MoviesActionDelegate moviesActionDelegate) {
+
+        mMoviesActionDelegate=moviesActionDelegate;
     }
+
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -27,7 +33,7 @@ public class MoviesAdapter extends RecyclerView.Adapter {
 
         View moviesItemView=inflater.inflate(R.layout.item_moive, parent, false);
 
-        ItemMoviesViewHolder itemMoviesViewHolder=new ItemMoviesViewHolder(moviesItemView);
+        ItemMoviesViewHolder itemMoviesViewHolder=new ItemMoviesViewHolder(moviesItemView,mMoviesActionDelegate);
 
         return itemMoviesViewHolder;
     }

@@ -5,11 +5,13 @@
     <string name="blade_popular"> Current Popularity</string>
     <string name="btn_overview">Movie Overview</string>
     <string name="tv_blade_details">Fear can hold you prisoner. Hope can sst you free</string>
+
     <string name="tv_blade_new_details">Blade Runner (1982) was a happy (yet gloomy) accident, involving: a) a young and ambitious director
 who fought ferociously with studio executives in order for them to let him fulfill his vision; b) a rising blockbuster star who wanted to prove
  he can also act in a serious movie; c) a crazy Dutch actor who decided to change the script and improvise one of the most memorable
 monologues in film history; d) a bunch of talented artists who wanted to make a movie that would look and sound different from anything else
 we had seen before.</string>
+
     <string name="tv_review"><u><i>Review</i></u></string>
     <string name="tv_review_details">  Blade Runner (1982) was a happy (yet gloomy) accident, involving: a) a young and ambitious director
 who fought ferociously with studio executives in order for them to let him fulfill his vision; b) a rising blockbuster star who wanted to prove
@@ -17,6 +19,7 @@ who fought ferociously with studio executives in order for them to let him fulfi
 monologues in film history; d) a bunch of talented artists who wanted to make a movie that would look and sound different from anything else
 we had seen before.
  </string>
+
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
@@ -108,4 +111,9 @@ we had seen before.
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="movie_hours">2 hr 22 mins</string>
+    <string name="movie_redemption">Blade Runner Redemption</string>
+    <string name="movie_released">Released: January 1994</string>
+    <string name="movie_rating">7.5</string>
+    <string name="toast_message">You click Crime</string>
 </resources>

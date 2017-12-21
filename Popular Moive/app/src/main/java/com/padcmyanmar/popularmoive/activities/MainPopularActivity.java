@@ -1,5 +1,6 @@
 package com.padcmyanmar.popularmoive.activities;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,8 +13,9 @@ import com.padcmyanmar.popularmoive.adapter.MoviesAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import delegates.MoviesActionDelegate;
 
-public class MainPopularActivity extends AppCompatActivity {
+public class MainPopularActivity extends AppCompatActivity implements MoviesActionDelegate {
     @BindView(R.id.rv_movie)
     RecyclerView rvMovie;
 
@@ -35,7 +37,8 @@ public class MainPopularActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        mMoviesAdapter=new MoviesAdapter();
+
+        mMoviesAdapter=new MoviesAdapter(this);
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
 
@@ -44,4 +47,20 @@ public class MainPopularActivity extends AppCompatActivity {
         rvMovie.setAdapter(mMoviesAdapter);
     }
 
+    @Override
+    public void onTapMoviesItem() {
+        Intent intent=new Intent(getApplicationContext(),MoviesDetailsItem.class);
+        startActivity(intent);
+
+    }
+
+    @Override
+    public void onTapOverviewButton() {
+
+    }
+
+    @Override
+    public void onTapFavoriteButton() {
+
+    }
 }
