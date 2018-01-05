@@ -5,11 +5,18 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.padcmyanmar.popularmoive.MoviesApp;
 import com.padcmyanmar.popularmoive.R;
 import com.padcmyanmar.popularmoive.adapter.TrailerAdapter;
+import com.padcmyanmar.popularmoive.events.LoadedMoviesEvent;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,7 +25,7 @@ import butterknife.ButterKnife;
  * Created by Daewi on 12/13/2017.
  */
 
-public class MoviesDetailsItem extends AppCompatActivity {
+public class MoviesDetailsActivity extends AppCompatActivity {
 
     @BindView(R.id.rec_trailer)
     RecyclerView recTrailer;
@@ -54,4 +61,5 @@ public class MoviesDetailsItem extends AppCompatActivity {
     public void ShowCrime(View view) {
         Toast.makeText(getApplicationContext(), R.string.toast_message,Toast.LENGTH_LONG).show();
     }
+
 }
