@@ -90,15 +90,16 @@
             android:id="@+id/rb_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             style="?android:attr/ratingBarStyleSmall"
             android:layout_toRightOf="@id/img_movie_photo"
             android:layout_below="@+id/tv_movie_popular"
-            android:numStars="6"
-            android:rating="6"
+            android:numStars="10"
             android:scaleX="0.9"
             android:scaleY="0.9"
             android:stepSize="1.0"
             android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             />
 
 

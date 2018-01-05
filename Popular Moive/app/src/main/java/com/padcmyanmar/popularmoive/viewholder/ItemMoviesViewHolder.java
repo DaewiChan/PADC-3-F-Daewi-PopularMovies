@@ -36,6 +36,10 @@ public class ItemMoviesViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.tv_rating)
     TextView tvMovieRating;
 
+    @BindView(R.id.rb_star)
+    RatingBar ratingBar;
+
+
     private MoviesActionDelegate mMoviesActionDelegate;
 
     public ItemMoviesViewHolder(View ItemView,MoviesActionDelegate moviesActionDelegate){
@@ -60,6 +64,8 @@ public class ItemMoviesViewHolder extends RecyclerView.ViewHolder {
         tvMovieType.setText(movies.getOriginalLanguage());
 
         tvMovieRating.setText(String.valueOf(movies.getVoteAverage()));
+
+        ratingBar.setRating(Float.parseFloat(String.valueOf(movies.getVoteAverage())));
 
         Glide.with(ivMoviePhoto.getContext())
                 .load(movies.getPosterPath())
