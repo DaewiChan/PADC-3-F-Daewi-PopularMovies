@@ -69,8 +69,7 @@ public class ItemMoviesViewHolder extends RecyclerView.ViewHolder {
                 .into(ivMoviePhoto);
 
 
-        /**
-         *  if (movies.getGenreIds() != null) {
+        if (movies.getGenreIds() != null) {
          ivMoviePhoto.setVisibility(View.VISIBLE);
          Glide.with(ivMoviePhoto.getContext())
          .load(movies.getGenreIds().get(0))
@@ -79,7 +78,6 @@ public class ItemMoviesViewHolder extends RecyclerView.ViewHolder {
          ivMoviePhoto.setVisibility(View.GONE);
          }
 
-         *
-         */
+
     }
 }
