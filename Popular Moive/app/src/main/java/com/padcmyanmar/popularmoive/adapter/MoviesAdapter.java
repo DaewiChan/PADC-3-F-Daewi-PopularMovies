@@ -7,25 +7,33 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.padcmyanmar.popularmoive.R;
+import com.padcmyanmar.popularmoive.data.vo.MovieItemVO;
 import com.padcmyanmar.popularmoive.viewholder.ItemMoviesViewHolder;
 
-import delegates.MoviesActionDelegate;
+import com.padcmyanmar.popularmoive.delegates.MoviesActionDelegate;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Daewi on 12/3/2017.
  */
 
-public class MoviesAdapter extends RecyclerView.Adapter {
+public class MoviesAdapter extends RecyclerView.Adapter<ItemMoviesViewHolder>{
     private MoviesActionDelegate mMoviesActionDelegate;
+
+    private List<MovieItemVO> mMoviesList;
 
     public MoviesAdapter(MoviesActionDelegate moviesActionDelegate) {
 
         mMoviesActionDelegate=moviesActionDelegate;
+
+        mMoviesList=new ArrayList<>();
     }
 
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ItemMoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         Context context= parent.getContext();
 
@@ -38,15 +46,21 @@ public class MoviesAdapter extends RecyclerView.Adapter {
         return itemMoviesViewHolder;
     }
 
-    @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
+
+    @Override
+    public void onBindViewHolder(ItemMoviesViewHolder holder, int position) {
+      holder.setMovies(mMoviesList.get(position));
     }
 
     @Override
     public int getItemCount() {
+        return mMoviesList.size();
+    }
 
-        return 10;
+    public void setMovies(List<MovieItemVO> moviesList){
+        mMoviesList=moviesList;
+        notifyDataSetChanged();//refresh adapter
     }
 
 }

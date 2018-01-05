@@ -174,11 +174,13 @@
 
             <TextView
                 android:id="@+id/tv_hour"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_category"
                 android:layout_marginLeft="16dp"
                 android:text="@string/movie_hours"
+                android:paddingLeft="12dp"
+                android:background="@drawable/shape"
                 android:textColor="@color/primary_text"
                 android:textSize="16sp" />
 

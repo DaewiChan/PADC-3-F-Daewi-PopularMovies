@@ -7,4 +7,6 @@ import android.app.Application;
  */
 
 public class MoviesApp extends Application {
+
+    public static final String LOG_TAG="MoviesApp";
 }
