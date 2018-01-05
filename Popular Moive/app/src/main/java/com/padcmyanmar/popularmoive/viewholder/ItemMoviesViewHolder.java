@@ -36,9 +36,6 @@ public class ItemMoviesViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.tv_rating)
     TextView tvMovieRating;
 
-    @BindView(R.id.rb_star)
-    RatingBar rbDetailsStar;
-
     private MoviesActionDelegate mMoviesActionDelegate;
 
     public ItemMoviesViewHolder(View ItemView,MoviesActionDelegate moviesActionDelegate){
@@ -68,11 +65,10 @@ public class ItemMoviesViewHolder extends RecyclerView.ViewHolder {
                 .load(movies.getPosterPath())
                 .into(ivMoviePhoto);
 
-
-        if (movies.getGenreIds() != null) {
+        if (movies.getPosterPath() != null) {
          ivMoviePhoto.setVisibility(View.VISIBLE);
          Glide.with(ivMoviePhoto.getContext())
-         .load(movies.getGenreIds().get(0))
+         .load(movies.getPosterPath())
          .into(ivMoviePhoto);
          }else {
          ivMoviePhoto.setVisibility(View.GONE);
